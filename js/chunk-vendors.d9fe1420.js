@@ -47,7 +47,7 @@ const i=function(e){const t=[];let n=0;for(let i=0;i<e.length;i++){let r=e.charC
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */const f=()=>h().__FIREBASE_DEFAULTS__,p=()=>{if("undefined"===typeof process)return;const e={NODE_ENV:"production",BASE_URL:"/"}.__FIREBASE_DEFAULTS__,t={NODE_ENV:"production",BASE_URL:"/"}.__FIREBASE_DEFAULTS_PATH__;if(e)return t&&console.warn("Values were provided for both __FIREBASE_DEFAULTS__ and __FIREBASE_DEFAULTS_PATH__. __FIREBASE_DEFAULTS_PATH__ will be ignored."),JSON.parse(e);if(t)try{const e=n(9163)(t);return e}catch(i){console.warn(`Unable to read defaults from file provided to __FIREBASE_DEFAULTS_PATH__: ${t}`)}},m=()=>{if("undefined"===typeof document)return;const e=document.cookie.match(/__FIREBASE_DEFAULTS__=([^;]+)/),t=e&&l(e[1]);return t&&JSON.parse(t)},v=()=>f()||p()||m(),g=()=>{var e;return null===(e=v())||void 0===e?void 0:e.config};
+ */const f=()=>h().__FIREBASE_DEFAULTS__,p=()=>{if("undefined"===typeof process)return;const e={NODE_ENV:"production",BASE_URL:"/push-msg/"}.__FIREBASE_DEFAULTS__,t={NODE_ENV:"production",BASE_URL:"/push-msg/"}.__FIREBASE_DEFAULTS_PATH__;if(e)return t&&console.warn("Values were provided for both __FIREBASE_DEFAULTS__ and __FIREBASE_DEFAULTS_PATH__. __FIREBASE_DEFAULTS_PATH__ will be ignored."),JSON.parse(e);if(t)try{const e=n(9163)(t);return e}catch(i){console.warn(`Unable to read defaults from file provided to __FIREBASE_DEFAULTS_PATH__: ${t}`)}},m=()=>{if("undefined"===typeof document)return;const e=document.cookie.match(/__FIREBASE_DEFAULTS__=([^;]+)/),t=e&&l(e[1]);return t&&JSON.parse(t)},v=()=>f()||p()||m(),g=()=>{var e;return null===(e=v())||void 0===e?void 0:e.config};
 /**
  * @license
  * Copyright 2017 Google LLC
@@ -957,4 +957,4 @@ const Ce="firebase-heartbeat-database",ke=1,Se="firebase-heartbeat-store";let Oe
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */class c{constructor(e){this.name=e,this.providers=new Map}addComponent(e){const t=this.getProvider(e.name);if(t.isComponentSet())throw new Error(`Component ${e.name} has already been registered with ${this.name}`);t.setComponent(e)}addOrOverwriteComponent(e){const t=this.getProvider(e.name);t.isComponentSet()&&this.providers.delete(e.name),this.addComponent(e)}getProvider(e){if(this.providers.has(e))return this.providers.get(e);const t=new s(e,this);return this.providers.set(e,t),t}getProviders(){return Array.from(this.providers.values())}}}}]);
-//# sourceMappingURL=chunk-vendors.318c18c2.js.map
+//# sourceMappingURL=chunk-vendors.d9fe1420.js.map
